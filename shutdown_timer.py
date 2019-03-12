@@ -157,6 +157,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
             if self.os == 'nt':
                 subprocess.run(['shutdown', '/s', '/t', str(self.time)])
+                self.timer.start(1000)
                 self.start_timer()
 
     def stop(self):
